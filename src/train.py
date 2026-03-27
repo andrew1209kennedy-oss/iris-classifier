@@ -46,6 +46,13 @@ output_path = os.path.join(outputs_dir, 'confusion_matrix.png')
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"Confusion matrix saved to {output_path}")
 
+import joblib
+
+model_path = os.path.join(outputs_dir,"model.joblib")
+joblib.dump(model, model_path)
+
+print(f"Model saved to {model_path}")
+
 
 
 
